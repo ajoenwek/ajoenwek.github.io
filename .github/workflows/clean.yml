@@ -1,16 +1,14 @@
-name: Clean
+name: Clean workflow
 on:
   workflow_dispatch:
 jobs:
   job-one:
     name: Clean
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
      - name: testing
-       uses: ajoenwek/ssh-action@master
+       uses: appleboy/ssh-action@master
        with:
           host: ${{secrets.HOST}}
           username: ${{secrets.USERNAME}}
