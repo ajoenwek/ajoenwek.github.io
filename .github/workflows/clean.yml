@@ -17,4 +17,4 @@ jobs:
          script: |
             cd ../pub
             unalias rm
-            rm -rf ajoenwek.github.io.git
+            rm -rf ajoenwek.github.io/
