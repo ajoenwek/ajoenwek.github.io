@@ -1,0 +1,21 @@
+name: deployment workflow
+on:
+  push:
+    branches: [ master ]
+jobs:
+  job-one:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: testing
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
+          port: ${{secrets.PORT}}
+          script: |
+            cd ../pub/ajoenwek.github.io
+            git pull 
+     
