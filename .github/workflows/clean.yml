@@ -10,10 +10,11 @@ jobs:
      - name: testing
        uses: appleboy/ssh-action@master
        with:
-          host: ${{secrets.HOST}}
-          username: ${{secrets.USERNAME}}
-          password: ${{secrets.PASSWORD}}
-          port: ${{secrets.PORT}}
-          script: |
+         host: ${{ secrets.HOST }}
+         username: ${{ secrets.USERNAME }}
+         password: ${{ secrets.PASSWORD }}
+         port: ${{ secrets.PORT }}
+         script: |
+            cd ../pub
             unalias rm
-            rm -rf ajoenwek/ajoenwek.github.io
+            rm -rf git@github.com:ajoenwek/ajoenwek.github.io.git
