@@ -3,16 +3,19 @@ FROM node:10-alpine
 
 #create a directory for the app and its node_modules with node as its owner
 
-RUN useradd -ms /bin/bash node 
-
-RUN mkdir -p /home/node/ap/ && chown -R node:node/home/node/app
-
-WORKDIR /home/node
+# RUN useradd -ms /bin/bash node 
 
 USER node
 
+WORKDIR /home/node
+
+COPY  . .
+
+RUN mkdir -p /home/node/app/ 
+
+
 #install all packages in package.json
-COPY package.json 
+COPY package.json .
 
 RUN npm install
 

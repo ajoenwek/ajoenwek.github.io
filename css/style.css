@@ -44,8 +44,8 @@ body {
 }
 
 .main-header {
-  background-color: rgb(107, 104, 104);
-  background-image: url("../../cmsc388T-web-template/assets/pexels-photo-1509534.jpeg");
+  background-color: rgb(204, 111, 111);
+  background-image: url("../assets/pexels-photo-1509534.jpeg");
   background-blend-mode: multiply;
   background-size: cover;
   padding-bottom: 30px;
