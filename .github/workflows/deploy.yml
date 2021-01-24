@@ -16,6 +16,6 @@ jobs:
           password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
           script: |
-            cd ajoenwek/ajoenwek.github.io
-            git pull
+            cd ../pub/ajoenwek/ajoenwek.github.io
+            git pull git@github.com:ajoenwek/ajoenwek.github.io.git
      
