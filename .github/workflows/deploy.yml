@@ -16,6 +16,6 @@ jobs:
           password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
           script: |
-            cd cmsc388T-web-template
+            cd ajoenwek/ajoenwek.github.io
             git pull
      
